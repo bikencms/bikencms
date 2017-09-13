@@ -1,0 +1,4 @@
+orn_admin:
+    resource: "@ORNAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
