@@ -1,0 +1,30 @@
+{
+  "name": "studio",
+  "authors": [
+    "Minh Biken"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "fancybox": "^3.0.47",
+    "owl.carousel": "^2.2.1",
+    "bootstrap-colorpicker": "^2.5.1"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1"
+  }
+}
