@@ -2,8 +2,42 @@
 
 {% trans_default_domain 'FOSUserBundle' %}
 {% block fos_user_content %}
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b>Admin</b>LTE</a>
+        </div><!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form name="form" class="form-validation" method="post" action="{{ path("fos_user_security_check") }}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                <div class="form-group has-feedback">
+                    <input type="text" placeholder="{{ 'security.login.username'|trans }}" class="form-control no-border" autocomplete="off" value="{{ last_username }}" name="_username">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" placeholder="{{ 'security.login.password'|trans }}" class="form-control no-border" name="_password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember Me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+
+                </div>
+            </form>
+        </div>
+    </div><!-- /.login-box-body -->
     <div class="container w-xxl w-auto-xs">
-        <a href class="navbar-brand block m-t">Alefoto Studio</a>
+        <a href class="navbar-brand block m-t">BikenCMS</a>
         <div class="m-b-lg">
             <form name="form" class="form-validation" method="post" action="{{ path("fos_user_security_check") }}">
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
