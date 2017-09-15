@@ -1,0 +1,31 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+{% block fos_user_content %}
+    <div class="container w-xxl w-auto-xs">
+        <a href class="navbar-brand block m-t">Alefoto Studio</a>
+        <div class="m-b-lg">
+            <form name="form" class="form-validation" method="post" action="{{ path("fos_user_security_check") }}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% if error %}
+                    <div class="alert alert-danger">
+                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                    </div>
+                {% endif %}
+                <div class="list-group list-group-sm">
+                    <div class="list-group-item">
+                        <input type="text" placeholder="{{ 'security.login.username'|trans }}" class="form-control no-border" autocomplete="off" value="{{ last_username }}" name="_username">
+                    </div>
+                    <div class="list-group-item">
+                        <input type="password" placeholder="{{ 'security.login.password'|trans }}" class="form-control no-border" name="_password">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-info btn-block">Đăng nhập</button>
+                {#<div class="text-center m-t m-b">
+                    <a href="#">Forgot password?</a>
+                </div>#}
+                <input type="hidden" name="_remember_me" value="on" />
+            </form>
+        </div>
+    </div>
+{% endblock fos_user_content %}

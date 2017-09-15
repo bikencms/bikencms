@@ -1,0 +1,13 @@
+<meta charset="utf-8"/>
+<title>BikenCMS</title>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+{% stylesheets
+    'assets/bootstrap/dist/css/bootstrap.min.css'
+    'assets/font-awsome/css/font-awsome.min.css'
+    'assets/Iconicons/css/iconicons.min.css'
+    'bundles/orncp/css/app.css'
+    'bundles/orncp/css/common.css' filter='cssrewrite' output='compiled/orncp/main.css'%}
+<link href="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
