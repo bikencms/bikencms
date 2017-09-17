@@ -1,0 +1,4 @@
+services:
+#    orn_app.example:
+#        class: ORN\AppBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

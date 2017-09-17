@@ -1,3 +1,7 @@
+orn_app:
+    resource: "@ORNAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
 orn_admin:
     resource: "@ORNAdminBundle/Resources/config/routing.yml"
     prefix:   /admin

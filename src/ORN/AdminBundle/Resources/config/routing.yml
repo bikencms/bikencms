@@ -1,3 +1,7 @@
 orn_admin_homepage:
     path:     /
     defaults: { _controller: ORNAdminBundle:Default:index }
+
+index:
+    path:     /
+    defaults: { _controller: ORNAdminBundle:Index:index }
